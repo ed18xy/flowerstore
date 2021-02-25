@@ -1,6 +1,3 @@
-// Name: Elya Denysova 
-// User name: ed18xy
-// St Numner: 6667596
 function loadstate(){
     if(localStorage.getItem('wishlistState')){
         wishlist = JSON.parse(localStorage.getItem('wishlistState'));
