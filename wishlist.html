@@ -1,0 +1,84 @@
+<html>
+    <!--
+        Name: Elya Denysova 
+        User name: ed18xy
+        St Numner: 6667596
+    -->
+    <!--mobile/screen size considered-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <title>Wishlist</title>  
+        <link rel="stylesheet" type="text/css" href="sheets.css"/>
+        <script src="general.js"></script>
+        <style>
+            #products {
+                border-collapse: collapse;
+                 width: 100%;
+                }
+                #products th {
+                    border: 1px solid #ddd;
+                    padding: 8px;
+                }
+                #products tr:nth-child(even){background-color: rgb(230, 234, 200);}
+                #products tr:nth-child(odd){background-color: rgb(255, 234, 200);}
+                #products tr:hover {background-color: #ddd;}
+        </style>
+        <script>
+            window.addEventListener("load",generate);
+            var state = loadstate();//load the wishlist
+            function generate(){//generate the table
+                state.forEach(write);
+             }
+             function write(value, index, array) {
+        var table = document.getElementById("products");
+        var row = table.insertRow(0);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        cell1.innerHTML = value.name;
+        cell2.innerHTML ="$"+value.cost;
+        deletion =  document.createElement("BUTTON");
+        deletion.innerHTML="remove";
+        deletion.id = value.ID;
+        deletion.className="rem";
+        deletion.addEventListener("click",deleteRow);
+        cell3.appendChild(deletion);
+      }
+      function deleteRow(event) {//function to delete row and item for a wishlist, update wishlist
+         r=event.target;
+         var i = r.parentNode.parentNode.rowIndex;
+         document.getElementById("products").deleteRow(i);
+         //find the item to delete in wishlist 
+        indexRemove = state.findIndex(finderIn);
+        //remove from the list
+        state.splice(indexRemove,1);
+         update();
+        }
+        function finderIn(value, index, array){return value.ID==r.id;}
+
+        </script>
+      </head>
+      
+     
+  <body>
+    <header><!--Navigation Bar-->
+        <nav >
+            <ul class="nav">
+                <li><a href="index.html"/>Home</a></li>
+                <li><a href="index2.html"/>Product overview</a></li>
+                <li><a href="index3.html"/>FAQ</a></li>
+                <li><a href="index4.html"/>Contact Us</a></li>
+                <li><a  class="active" href="wishlist.html"/>Wishlist</a></li>
+                </ul>
+            </nav>
+    
+        </header>
+    <h1>Wishlist</h1>
+    <table id = "products">
+    </table>
+    <footer >
+            <small>Disclaimer:Icons are taken from a free source https://material.io/resources/icons/?icon=delete&style=baseline.Pictures are from my backyard, you are free to take. Rely on any information on your own resposnsibility.
+            </small>
+    </footer>   
+  </body>
+</html>

@@ -1,0 +1,87 @@
+/*Elya Denysova ed18xy 667596*/
+/*Custom font*/
+@font-face {
+    font-family: 'Floral';
+    src: url('IndieFlower-Regular.ttf');
+  }
+body { 
+  background-color:lightgoldenrodyellow ;
+  margin: 0;
+}
+/*Nav bar style*/
+
+ul.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(243, 150, 201);
+}
+
+ul.nav li {float: left;}
+
+ul.nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 12px 20px;
+  text-decoration: none;
+}
+
+ul.nav li a:hover:not(.active) {background-color: rgb(172, 234, 238);}
+
+ul.nav li a.active {background-color: #af4c75;}
+
+
+@media screen and (max-width: 600px) {
+  
+  ul.nav li {float: none;}
+}
+
+  
+  /*Custom font*/
+  @font-face {
+    font-family: 'Rounded';
+    src: url('VarelaRound-Regular.ttf');
+  }
+  /*Products description style*/
+  .des{
+    background-color: #e1f9fa;
+    border-radius: 10pt;
+    margin-bottom: 10;
+    padding: 12;
+    font-family: Rounded;
+  }
+  footer { position: fixed; bottom: 0pt; left: 0pt; }
+  /*Print media rules*/
+  @media print {
+    img{
+      border: none !important;
+    }
+    img:hover{
+      box-shadow: none !important;
+    }
+    .button, footer {
+      display: none !important;
+    }
+    p, article{
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    body {
+      color: #000;
+      background-color: #fff;
+    }
+  }
+
+  .like {
+    color: red;
+  }
+  .dislike {
+    color: black;
+  }
+ .rem{
+   background-color: rgb(222, 214, 230);
+   border: none;
+   cursor: pointer;
+ }

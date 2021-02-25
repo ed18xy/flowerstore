@@ -1,0 +1,122 @@
+<html>
+    <!--
+        Name: Elya Denysova 
+        User name: ed18xy
+        St Numner: 6667596
+    -->
+    <!--mobile/screen size considered-->
+    <!---->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <title>Overview</title>  
+        <link rel="stylesheet" type="text/css" href="sheets.css"/>
+        <style>
+          
+            td {
+                text-align: center;
+            }
+            /*Product images style*/
+            img{
+                border: 3px solid rgba(241, 237, 229, 0.884);
+            }
+            img:hover { box-shadow: 0 0 4px 3px rgba(206, 10, 224, 0.349);
+            }
+         
+        </style>
+         <script src="general.js"></script>
+         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <script>
+         var state = loadstate();//load the current state of wishlist from Local Storage
+         window.addEventListener("load",addListeners);//add Event Listener to all 
+         function addListeners(){
+           product0 = document.getElementById("Light");
+           product1 = document.getElementById("Pink");
+           product2 = document.getElementById("White");
+           product3 = document.getElementById("Orange");
+           
+           product0.id = light.ID;
+           product1.id = pink.ID;
+           product2.id = white.ID;
+           product3.id = orange.ID;
+
+           product0.addEventListener("click",toggleicon);
+           product1.addEventListener("click",toggleicon);
+           product2.addEventListener("click",toggleicon);
+           product3.addEventListener("click",toggleicon);
+           //change icons that were choosen before 
+           updateIcons(0);
+           updateIcons(1);
+           updateIcons(2);
+           updateIcons(3);
+         }
+
+
+      </script>
+      </head>
+      <body>
+        <header>  <!--Navigation Bar-->
+            <nav >
+              <ul class="nav">
+                <li><a href="index.html"/>Home</a></li>
+                <li><a  class="active"  href="index2.html"/>Product overview</a></li>
+                <li><a href="index3.html"/>FAQ</a></li>
+                <li><a href="index4.html"/>Contact Us</a></li>
+                <li><a href="wishlist.html"/>Wishlist</a></li>
+                </ul>
+                </nav>
+        </header>
+
+        <table >
+            <tr>
+                <th colspan="4" style="font-size: 30;"> <em>Our garden</em></th>
+                </tr>
+                <tr style = "font-family: Rounded;">
+                </tr>
+                <tr>
+                    <!--Product #1-->
+                <td > <a href="index5.html"/><img src="1.png" alt="Light Pink Rose" width=80%  /></a></td>
+                  <!--Product #2-->
+                <td> <a href="index6.html"/><img src="2.png" alt="Light Pink Rose" width=80% /></a></td>
+                  <!--Product #3-->
+                <td> <a href="index7.html"/><img src="3.png" alt="Light Pink Rose" width=80% /></a></td>
+                  <!--Product #4-->
+                <td> <a href="index8.html"/><img src="4.png" alt="Light Pink Rose" width=80% /></a></td>
+                </tr>
+                  <!--Product #1-->
+                <th>Light Pink Rose</th>
+                  <!--Product #2-->
+                <th>Pink Rose</th>
+                  <!--Product #3-->
+                <th>Pink-White Rose</th>
+                  <!--Product #4-->
+                <th>Light Orange Rose</th>
+                <tr>
+                      <!--Product #1-->
+                    <td>$30</td>
+                      <!--Product #2-->
+                    <td>$25</td>
+                      <!--Product #3-->
+                    <td>$20</td>
+                      <!--Product #4-->
+                    <td>$30</td>
+                </tr>
+                <tr>
+                  <!--Product #1-->
+                <td style="cursor: pointer;"><i id = "Light" class="material-icons " >favorite</i></td>
+                  <!--Product #2-->
+                <td style="cursor: pointer;"><i id = "Pink"  class="material-icons" >favorite</i></td>
+                  <!--Product #3-->
+                <td style="cursor: pointer;"><i id = "White" class="material-icons">favorite</i></td>
+                  <!--Product #4-->
+                <td style="cursor: pointer;"><i id = "Orange" class="material-icons">favorite</i></td>
+            </tr>
+        </table>
+        <footer >
+            <small>Disclaimer:Icons are taken from a free source https://material.io/resources/icons/?icon=delete&style=baseline. Pictures are from my backyard, you are free to take. Rely on any information on your own resposnsibility.
+            </small>
+            
+        </footer>   
+    </body>
+
+</html>
